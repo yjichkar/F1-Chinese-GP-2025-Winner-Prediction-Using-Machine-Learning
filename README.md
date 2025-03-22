@@ -62,6 +62,7 @@ model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, random_st
 model.fit(X_train, y_train)
 
 # Predict using 2025 qualifying times
+
 predicted_lap_times = model.predict(qualifying_2025[["QualifyingTime (s)"]])
 qualifying_2025["PredictedRaceTime (s)"] = predicted_lap_times
 
